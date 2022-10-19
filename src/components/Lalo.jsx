@@ -14,7 +14,8 @@ import {
   bookings,
   shopping,
   livecon,
-  lalologo
+  lalologo,
+  kulosa
 } from "./icons";
 import "./css/Lalo.css";
 import { Carousel } from "react-responsive-carousel";
@@ -31,14 +32,14 @@ const bookings_idx = hour + (hour*5)
   return (
     <div className="Lalo-main">
       <div className="child-closer" onClick={() => props.setItIsOpen(false)}>
-        <div className="closest">+</div>
+        <div className="closest">{kulosa}</div>
       </div>
       <Carousel>
         <div>
           <div className="child" style={{ marginTop: "20px" }}>
             <p style={{textTransform:"uppercase", fontSize:"0.7em"}}>
               {lalologo}<br/>
-              LALO COMMUNITIES is AN ALWAYS ON
+              LALO COMMUNITIES is AN ALWAYS ON &nsbp; |
               <br /> 24/7 INSTANT WEB3 BOOKING DAPP
               <br /> powering small communities & THEIR <br /> VISITORS 🌎.
               <br />
