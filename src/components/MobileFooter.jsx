@@ -23,7 +23,7 @@ const MobileFooter = ({ setItIsOpen }) => {
   return (
     <div className="foot-container">
       <br/><br/>
-      <h4>Need Help ? Call : +254 115 144 146</h4>
+      <h4>Need Help ? Call : <a href="tel:254115144146">+254115144146</a></h4>
       <br/>
       <NavLink to="/how-it-works" className="how">
         <div className="wrap-how">
