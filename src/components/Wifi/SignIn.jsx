@@ -37,7 +37,7 @@ function SignIn() {
     <form style={{maxWidth:"700px", margin:"auto",  marginTop:"50px"}}>
         <label style={{width:"80%"}}>Phone Number</label><br/>
         <input type="text" placeholder="Enter your Phone Number" onChange={(e) => setPnumber(e.target.value)} style={{width:"80%", marginTop:"20px"}}/><br/>
-      <button type="submit" onClick={handleSubmit} style={{color:"#000", marginTop:"20px", marginBottom:"30px"}}>
+      <button type="submit" onClick={handleSubmit} style={{marginTop:"20px", marginBottom:"30px"}}>
         Sign In
       </button>
 
