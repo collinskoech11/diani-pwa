@@ -1,0 +1,14 @@
+form *{
+    margin-top:20px;
+    width:70%;
+}
+form button{
+    width:100px;
+    color:#000;
+}
+form label{
+    margin-top:20px;
+}
+form {
+    text-align: center;
+}
