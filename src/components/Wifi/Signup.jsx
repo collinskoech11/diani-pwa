@@ -16,8 +16,6 @@ function Signup() {
 
     let handleSubmit =  async (e) => {
         console.log("clicked")
-
-
         e.preventDefault();
         try{
       
@@ -51,7 +49,7 @@ function Signup() {
         <input required type="text" placeholder="Enter your Phone Number" onChange={(e) => setPnumber(e.target.value)}  /><br/>
 
         <label>Your Age</label><br/>
-        <input required type="number" placeholder="Enter your Phone Number" onChange={(e) => setAge(e.target.value)}  /><br/>
+        <input required type="number" placeholder="Enter your Age" onChange={(e) => setAge(e.target.value)}  /><br/>
 
 
         <label>Your Country</label><br/>
