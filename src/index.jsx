@@ -7,51 +7,43 @@ import * as serviceWorker from "./registerServiceWorker";
 import PWAPrompt from "react-ios-pwa-prompt";
 import "@rainbow-me/rainbowkit/styles.css";
 import {
-  getDefaultWallets,
-  RainbowKitProvider,
-  darkTheme,
+  // getDefaultWallets,
+  // RainbowKitProvider,
+  // darkTheme,
 } from "@rainbow-me/rainbowkit";
-import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
-import { alchemyProvider } from "wagmi/providers/alchemy";
-import { publicProvider } from "wagmi/providers/public";
+// import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+// import { alchemyProvider } from "wagmi/providers/alchemy";
+// import { publicProvider } from "wagmi/providers/public";
 import reportWebVitals from "./reportWebVitals";
 import ReactPwa from "react-pwa-app";
 import { ClearBrowserCacheBoundary } from "react-clear-browser-cache";
 import {CookiesProvider} from "react-cookie"
 import { Web3ReactProvider } from '@web3-react/core'
 import { Web3Provider } from "@ethersproject/providers";
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-basic'
 
 function getLibrary(provider){
   return new Web3Provider(provider);
 }
 
-const { chains, provider, webSocketProvider } = configureChains(
-  [
-    chain.mainnet,
-    // chain.polygon,
-    // chain.optimism,
-    // chain.arbitrum,
-    // ...(process.env.REACT_APP_ENABLE_TESTNETS === "true"
-    //   ? [chain.goerli, chain.kovan, chain.rinkeby, chain.ropsten]
-    //   : []),
-  ],
-  [
-    alchemyProvider({ apiKey: "_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC" }),
-    publicProvider(),
-  ]
-);
+// const { chains, provider, webSocketProvider } = configureChains(
+//   [
+//     chain.mainnet,
+//     // chain.polygon,
+//     // chain.optimism,
+//     // chain.arbitrum,
+//     // ...(process.env.REACT_APP_ENABLE_TESTNETS === "true"
+//     //   ? [chain.goerli, chain.kovan, chain.rinkeby, chain.ropsten]
+//     //   : []),
+//   ],
+//   [
+//     alchemyProvider({ apiKey: "_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC" }),
+//     publicProvider(),
+//   ]
+// );
 
-const { connectors } = getDefaultWallets({
-  appName: "RainbowKit demo",
-  chains,
-});
 
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors,
-  provider,
-  webSocketProvider,
-});
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -78,13 +70,22 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+const options = {
+  // you can also just use 'bottom center'
+  position: positions.TOP_CENTER,
+  timeout: 5000,
+  offset: '30px',
+  // you can also just use 'scale'
+  transition: transitions.SCALE,
+  width:"auto",
+  padding:"10px"
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains} theme={darkTheme()}>
+     
           <ReactPwa
             test //is to install in localhost, not required
             config={{
@@ -115,7 +116,9 @@ root.render(
               <ClearBrowserCacheBoundary>
                 <CookiesProvider>
                   <Web3ReactProvider getLibrary={getLibrary}>
-                    <App />
+                    <AlertProvider template={AlertTemplate} {...options}>
+                      <App />
+                    </AlertProvider>
                   </Web3ReactProvider>
                 </CookiesProvider>
                 <PWAPrompt
@@ -128,8 +131,6 @@ root.render(
               </ClearBrowserCacheBoundary>
             </ErrorBoundary>
           </ReactPwa>
-        </RainbowKitProvider>
-      </WagmiConfig>
     </React.StrictMode>
   </BrowserRouter>
 );
