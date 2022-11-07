@@ -19,7 +19,7 @@ function Signup() {
         e.preventDefault();
         try{
       
-            const {data} =  await axios.post("http://18.118.170.80/users/new",  {
+            const {data} =  await axios.post("https://api.dianiapp.me/users/new",  {
                 name: name,
                 phoneNumber: pnumber,
                 Age: age,

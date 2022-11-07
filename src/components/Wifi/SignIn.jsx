@@ -17,7 +17,7 @@ function SignIn() {
     e.preventDefault();
     try{
   
-        const {data} =  await axios.post("http://18.118.170.80/users/login",  {
+        const {data} =  await axios.post("https://api.dianiapp.me/users/login",  {
             phoneNumber: pnumber,
         });
         if(data.status === 200){
