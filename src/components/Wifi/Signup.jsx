@@ -21,9 +21,9 @@ function Signup() {
       
             const {data} =  await axios.post("http://18.118.170.80/users/new",  {
                 name: name,
-                        phoneNumber: pnumber,
-                        Age: age,
-                        country: country
+                phoneNumber: pnumber,
+                Age: age,
+                country: country
             });
             if(data.status === "success"){
                 setName("")
@@ -49,7 +49,7 @@ function Signup() {
         <input required type="text" placeholder="Enter your Phone Number" onChange={(e) => setPnumber(e.target.value)}  /><br/>
 
         <label>Your Age</label><br/>
-        <input required type="number" placeholder="Enter your Age" onChange={(e) => setAge(e.target.value)}  /><br/>
+        <input required type="number" placeholder="Enter your" onChange={(e) => setAge(e.target.value)}  /><br/>
 
 
         <label>Your Country</label><br/>
