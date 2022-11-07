@@ -30,7 +30,7 @@ function Signup() {
                 setAge("")
                 setPnumber("")
                 setCountry("")
-                window.location.href = 'https://dianiapp.me' 
+                window.location.href = 'http://lalo.wireless/login.html?@NW' 
             } else {
                 let path = '/error'
                 navigate(path)

