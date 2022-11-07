@@ -20,9 +20,9 @@ function SignIn() {
         const {data} =  await axios.post("https://api.dianiapp.me/users/login",  {
             phoneNumber: pnumber,
         });
-        if(data.status === 200){
+        if(data.message == "success"){
             setPnumber("")
-        } 
+        }
         window.location.href = 'http://lalo.wireless/login.html?@NW'
     } catch(err){
         console.log(err)
