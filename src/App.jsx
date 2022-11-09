@@ -25,6 +25,8 @@ import InterractiveSection from "./components/WalletConnector.jsx";
 import Preloader from "./components/PreLoad/Preloader";
 // import {useCookies} from 'react-cookie';
 import {WalletProvider}  from  "./context/WalletContext"
+import SignIn from "./components/Wifi/SignIn";
+import Signup from "./components/Wifi/Signup";
 
 function App() {
   // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
@@ -77,6 +79,8 @@ function App() {
       <MobileNav />
       <BotIcon/>
       <Routes>
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/signin" element={<SignIn/>}/>
         <Route path="/" element={<Home />} />
         <Route path="/popular" element={<Home />} />
         <Route path="/Wellness" element={<Wellness />} />
