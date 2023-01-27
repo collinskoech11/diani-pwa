@@ -51,6 +51,9 @@ function Nav() {
           <NavLink to="/popular">
             <h5>⭐ Popular</h5>
           </NavLink>
+          <NavLink to="/fast-shopping">
+            <h5>Fast Shopping</h5>
+          </NavLink>
           <NavLink to="/Wellness">
             <h5>Wellness</h5>
           </NavLink>

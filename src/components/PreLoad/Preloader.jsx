@@ -5,7 +5,7 @@ import "./text.css";
 function Preloader() {
   return (
     <>
-      <div className="animate">
+      <div className="">
         
         <h2 style={{marginTop:"45vh"}}> <br/>Diani App</h2>
       </div>

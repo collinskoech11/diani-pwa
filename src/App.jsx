@@ -25,6 +25,7 @@ import ReactGA from 'react-ga'
 import {wifi} from "./components/icons"
 import usePageTracking from "./usePageTracking";
 import axios from "axios";
+import Fast from "./components/pages/Fast";
 // import RatingView from "./components/pages/RatingView";
 
 const TRACKING_ID = "G-Q6E9KV4GKH";
@@ -59,7 +60,7 @@ function App() {
   }
   
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 3000);
+    setTimeout(() => setIsLoading(false), 1000);
   }, [])
 
   useEffect(() => {
@@ -77,9 +78,6 @@ function App() {
   const Redirect = () => {
     return (
       <>
-        <a href="https://lalowifi.me" style={{position:"fixed", bottom:"11vh", left:"20px", borderRadius:"50%",boxShadow:" navy 0px 5px 15px", margin:"0", padding:"0"}}>
-          {wifi}
-        </a>
       </>
     )
   }
@@ -109,6 +107,7 @@ function App() {
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/:from" element={<Home />} />
         <Route path="/" element={<Home />} />
+        <Route path="/fast-shopping" element={<Fast/>}/>
         <Route path="/popular" element={<Home />} />
         <Route path="/Wellness" element={<Wellness />} />
         <Route path="/NightLife" element={<NightLife />} />
