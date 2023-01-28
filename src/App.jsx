@@ -97,7 +97,7 @@ function App() {
       <Nav />
       {/* <Marquee/> */}
       {/* <AddToHomeScreen /> */}
-      <Type />
+      {/* <Type /> */}
       {/* <WeatherIcon /> */}
       {/* {isOpen && <Popup setIsOpen={setIsOpen}/>} */}
       <MobileNav />

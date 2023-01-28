@@ -47,7 +47,7 @@ function Nav() {
             <img src={logo} alt="logo image"/>
           </NavLink>
         </div>
-        <div className="Links-container">
+        {/* <div className="Links-container">
           <NavLink to="/popular">
             <h5>⭐ Popular</h5>
           </NavLink>
@@ -60,17 +60,13 @@ function Nav() {
           <NavLink to="/Activities">
             <h5>Activities + Tours</h5>
           </NavLink>
-          {/* <NavLink to="/Tours">
-            <h5>Tours</h5>
-          </NavLink> */}
-
           <NavLink to="/NightLife">
             <h5>Night Life</h5>
           </NavLink>
           <NavLink to="/VIP">
             <h5>VIP</h5>
           </NavLink>
-        </div>
+        </div> */}
         {/* <h4><WalletConnect/></h4> */}
         <Pwabtn/>
         {/* {pwa.isInstalled =="none" ? (  */}
