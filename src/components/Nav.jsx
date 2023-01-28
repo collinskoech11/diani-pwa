@@ -2,6 +2,7 @@
 // import { useState, useEffect } from "react";
 import "./css/Nav.css";
 import logo from "./assets/logo.png";
+import { useState, useEffect } from "react";
 // import toast from "react-hot-toast";
 // import { addHome, reallogo, installation } from "./icons";
 // import WeatherIcon from "../components/WeatherIcon";
@@ -10,41 +11,45 @@ import { usePwa } from "react-pwa-app";
 
 function Nav() {
   const pwa = usePwa();
+  const [load, setLoad] = useState(true);
 
   console.log(pwa.registration); // ServiceWorkerRegistration
   const currentTime = new Date().toLocaleTimeString();
   console.log("#######", currentTime);
 
+  useEffect(() => {
+    setTimeout(() => setLoad(false), 10000);
+  }, []);
 
-
-  const Pwabtn =()=>{
-    if(pwa.isInstalled === "standalone"){
-      return null
+  const Pwabtn = () => {
+    if (pwa.isInstalled === "standalone") {
+      return null;
     } else {
-      return(
+      return (
         <>
-        <div className="pwa-con">
-          <div className="pwa-btn">
-            <div>
-              <h5>
-                ⭐⭐⭐⭐⭐
-              </h5>
+          {load ? (
+            <div className="pwa-con">
+              <div className="pwa-btn">
+                <div>
+                  <h5>⭐⭐⭐⭐⭐</h5>
+                </div>
+                <button onClick={pwa.install}>Install</button>
+              </div>
             </div>
-            <button onClick={pwa.install}>Install</button>
-          </div>
-        </div>
+          ) : (
+            <></>
+          )}
         </>
-      )
+      );
     }
-
-  }
+  };
 
   return (
     <nav>
       <div className="nav-main">
         <div className="Logo-container">
           <NavLink to="/">
-            <img src={logo} alt="logo image"/>
+            <img src={logo} alt="logo image" />
           </NavLink>
         </div>
         {/* <div className="Links-container">
@@ -68,10 +73,10 @@ function Nav() {
           </NavLink>
         </div> */}
         {/* <h4><WalletConnect/></h4> */}
-        <Pwabtn/>
+        <Pwabtn />
         {/* {pwa.isInstalled =="none" ? (  */}
 
-          {/* ) : null} */}
+        {/* ) : null} */}
       </div>
     </nav>
   );
