@@ -34,6 +34,7 @@ ReactGA.initialize(TRACKING_ID);
 
 function App() {
   usePageTracking();
+  const [modalShow, setModalShow] = useState(false);
   
   // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
   const [itIsOpen, setItIsOpen]= useState(false)
@@ -91,10 +92,11 @@ function App() {
       <Preloader/>
     ):(
       <>
-      <InterractiveSection/>
+      <InterractiveSection onHide={() => setModalShow(false)}/>
       <Redirect/>
       <DefaultNav/>
-      <Nav />
+      <Nav /><br/><br/>
+      <h4>Deliveries,  Bookiings, Anytime / Anywhere</h4>
       {/* <Marquee/> */}
       {/* <AddToHomeScreen /> */}
       {/* <Type /> */}
