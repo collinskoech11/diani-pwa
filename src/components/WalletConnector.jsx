@@ -2,19 +2,16 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   interractive,
-  message,
   walletconnectionsmall,
   profile,
   wifi,
-  messagetemplate,
   lalologo,
   closevg,
-  accounttemplate,
   addHome,
 } from "./icons";
 import "./css/walletModal.css";
-import ReactWhatsapp from "react-whatsapp";
 import { Tab, Tabs, TabPanel, TabList } from "react-tabs";
+import MiniLoader from "./MiniLoader";
 // import { ConnectButton } from '@rainbow-me/rainbowkit';
 // import ConnectWalet from  "./../ConnectWallet"
 
@@ -62,24 +59,24 @@ const InterractiveSection = () => {
             <Tabs className="transit">
               <TabPanel className="transition" >
                 <div className="message-wifi" style={{display:"block", width:"100%"}}>
-                  <NavLink to="/popular" activeclassname="active" style={{width:"100%"}}>
+                  <NavLink to="/popular" activeclassname="active" style={{width:"100%"}} onClick={() => handleClick()}>
                     <h5 style={{color:"#000", paddingBottom:"10px", width:"100%", textAlign:"center"}}>⭐ Popular</h5>
                   </NavLink>
-                  <NavLink to="/fast-shopping" activeclassname="active" style={{width:"100%"}}>
+                  <NavLink to="/fast-shopping" activeclassname="active" style={{width:"100%"}} onClick={() => handleClick()}>
                     <h5 style={{color:"#000", paddingBottom:"10px", width:"100%", textAlign:"center"}}>Fast Shopping</h5>
                   </NavLink>
-                  <NavLink to="/Wellness" activeclassname="active" style={{width:"100%"}}>
+                  <NavLink to="/Wellness" activeclassname="active" style={{width:"100%"}} onClick={() => handleClick()}>
                     <h5 style={{color:"#000", paddingBottom:"10px", width:"100%", textAlign:"center"}}>Wellness</h5>
                   </NavLink>
-                  <NavLink to="/Activities" activeclassname="active" style={{width:"100%"}}>
+                  <NavLink to="/Activities" activeclassname="active" style={{width:"100%"}} onClick={() => handleClick()}>
                     <h5 style={{color:"#000", paddingBottom:"10px", width:"100%", textAlign:"center"}}>
                       Activities +<br /> Tours
                     </h5>
                   </NavLink>
-                  <NavLink to="/NightLife" activeclassname="active" style={{width:"100%"}}>
+                  <NavLink to="/NightLife" activeclassname="active" style={{width:"100%"}} onClick={() => handleClick()}>
                     <h5 style={{color:"#000", paddingBottom:"10px", width:"100%", textAlign:"center"}}>Night Life</h5>
                   </NavLink>
-                  <NavLink to="/VIP" activeclassname="active" style={{width:"100%"}}>
+                  <NavLink to="/VIP" activeclassname="active" style={{width:"100%"}} onClick={() => handleClick()}>
                     <h5 style={{color:"#000", paddingBottom:"10px", width:"100%", textAlign:"center"}}>VIP</h5>
                   </NavLink>
                 </div>
@@ -127,9 +124,11 @@ const InterractiveSection = () => {
                     fontWeight: "bold",
                     marginTop: "50px",
                     fontSize: "0.8em",
+                    display:"grid",
+                    gridTemplateColumns:"1fr 1fr"
                   }}
                 >
-                  Accessing free wifi...
+                  Accessing free wifi <MiniLoader/>
                 </h3>
               </TabPanel>
               <TabList className="icons-flex">

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from 'react-responsive-carousel';
-import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 import "../css/carousel.css";
 import {
   mpesa,
@@ -39,9 +37,7 @@ function HowItWorks() {
   // };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    resolveRecord();
-  }, []);
+
   const data = [
     {
       icon: one,
@@ -95,6 +91,9 @@ function HowItWorks() {
       return {};
     }
   };
+  useEffect(() => {
+    resolveRecord();
+  }, []);
 
   const CopyButton = ({ text }) => {
     const clickRef = useCopyToClipboard(

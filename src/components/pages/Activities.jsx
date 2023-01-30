@@ -6,7 +6,6 @@ import camel from "../assets/camel.png"
 import quad from "../assets/quad.png"
 import skydiving from "../assets/skydiving.png"
 import skiing from "../assets/skiing.jpg"
-import sunset from "../assets/activities/Sunset.webp"
 import glassboat from "../assets/glassboat.png"
 import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 
@@ -83,17 +82,17 @@ function Activities() {
                 <div>
                     <div className="act-item">
                         <div className="act-main-image" style={{backgroundImage:{image}}}>
-                          <img src={image}/>
+                          <img src={image} alt="activity main "/>
                         </div>
                         <div className="images-sub">
                             <div className="price-per">
                                 <h5>{item.price}</h5>
                             </div>
                             <div className="act-per">
-                              <img src={image} style={{width:"100%", height:"100%"}}/>
+                              <img src={image} style={{width:"100%", height:"100%"}} alt="activity per person"/>
                             </div>
                             <div className="act-per">
-                              <img src={image} style={{width:"100%", height:"100%"}}/>
+                              <img src={image} style={{width:"100%", height:"100%"}} alt="act for multiple"/>
                             </div>
                         </div>
                         <div className="text">

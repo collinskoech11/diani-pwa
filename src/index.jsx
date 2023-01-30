@@ -16,7 +16,7 @@ import {CookiesProvider} from "react-cookie"
 import { Web3ReactProvider } from '@web3-react/core'
 import { Web3Provider } from "@ethersproject/providers";
 // import { transitions, positions, Provider as AlertProvider } from 'react-alert'
-import AlertTemplate from 'react-alert-template-basic'
+// import AlertTemplate from 'react-alert-template-basic'
 
 function getLibrary(provider){
   return new Web3Provider(provider);
