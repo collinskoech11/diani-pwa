@@ -87,27 +87,25 @@ const InterractiveSection = () => {
               >
                 <div
                   style={{
-                    marginTop: "70px",
                     display: "flex",
                     flexDirection: "row",
                   }}
                 >
-                  {/* <ConnectButton/> */}
-                  {/* <ConnectWalet /> */}
-                  {/* <button onClick={() => { activate(CoinbaseWallet) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Coinbase Wallet</button>
-                  <button onClick={() => { activate(WalletConnect) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Wallet Connect</button> */}
-                  {/* <button onClick={() => { activate(Injected) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Metamask</button> */}
+                  <h3  style={{
+                    color: "#000",
+                    fontWeight: "bold",
+                    fontSize: "0.8em",
+                  }}
+                  >Web3 wallet connect comming soon</h3>
                 </div>
               </TabPanel>
               <TabPanel
                 className="transition"
-                style={{ justifyContent: "center" }}
               >
                 <h3
                   style={{
                     color: "#000",
                     fontWeight: "bold",
-                    marginTop: "50px",
                     fontSize: "0.8em",
                   }}
                 >
@@ -127,6 +125,7 @@ const InterractiveSection = () => {
                     display:"grid",
                     gridTemplateColumns:"1fr 1fr"
                   }}
+                  className="center"
                 >
                   Accessing free wifi <MiniLoader/>
                 </h3>
