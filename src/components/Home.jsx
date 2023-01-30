@@ -146,56 +146,6 @@ function Home() {
           </div>
         </ReactWhatsapp>
 
-        <h4 style={{ marginTop: "30px" }}>BANKING & FX {bankfx}</h4>
-        <ReactWhatsapp
-          number={"+254115144146"}
-          message={"Hello DianiApp 😊 I need  Cash and Currency exchange 💰"}
-          className="whatsapp"
-          onClick={() => gaEventTracker("Cash and currencies exchange")}
-        >
-          <div className="Tab-item">
-            <div className="grid-left">{ksh}</div>
-            <div className="grid-right"> Cash. Currencies. Exchange</div>
-          </div>
-        </ReactWhatsapp>
-
-        <ReactWhatsapp
-          number={"+254115144146"}
-          message={"Hello DianiApp 😊 I need to spend Crypto ₿"}
-          className="whatsapp"
-          onClick={() => gaEventTracker("Spend Crypto")}
-        >
-          <div className="Tab-item">
-            <div className="grid-left">{cryptobtnnew}</div>
-            <div className="grid-right"> Spend Crypto</div>
-          </div>
-        </ReactWhatsapp>
-        <div className="shrink-container">
-          <ReactWhatsapp
-            number={"+254115144146"}
-            message={"Hello DianiApp 😊 I need to send Crypto ₿"}
-            className="shrink"
-            onClick={() => gaEventTracker("Send Crypto")}
-          >
-            <div className="bg">
-              <div className="shrink">{sendcrypto}</div>
-              <div className="shrink"> Send Crypto</div>
-            </div>
-          </ReactWhatsapp>
-
-          <ReactWhatsapp
-            number={"+254115144146"}
-            message={"Hello DianiApp 😊 I need to receive Crypto ₿"}
-            className="shrink"
-            onClick={() => gaEventTracker("Receive Crypto")}
-          >
-            <div className="bg">
-              <div className="shrink">{receivecrypto}</div>
-              <div className="shrink"> Receive Crypto</div>
-            </div>
-          </ReactWhatsapp>
-        </div>
-
         <h4 style={{ marginTop: "30px" }}>INSTANT HIRE {rocket}</h4>
         {/* <h4>RENT A {rocket}</h4> */}
         <ReactWhatsapp
@@ -273,6 +223,58 @@ function Home() {
             {/* <div className="scooter"><p style={{background:"none"}}>Guru<br/>{geek}</p><p style={{background:"none"}}>Repair <br/>{fix}</p></div>      */}
           </div>
         </ReactWhatsapp>
+
+        <h4 style={{ marginTop: "30px" }}>BANKING & FX {bankfx}</h4>
+        <ReactWhatsapp
+          number={"+254115144146"}
+          message={"Hello DianiApp 😊 I need  Cash and Currency exchange 💰"}
+          className="whatsapp"
+          onClick={() => gaEventTracker("Cash and currencies exchange")}
+        >
+          <div className="Tab-item">
+            <div className="grid-left">{ksh}</div>
+            <div className="grid-right"> Cash. Currencies. Exchange</div>
+          </div>
+        </ReactWhatsapp>
+
+        <ReactWhatsapp
+          number={"+254115144146"}
+          message={"Hello DianiApp 😊 I need to spend Crypto ₿"}
+          className="whatsapp"
+          onClick={() => gaEventTracker("Spend Crypto")}
+        >
+          <div className="Tab-item">
+            <div className="grid-left">{cryptobtnnew}</div>
+            <div className="grid-right"> Spend Crypto</div>
+          </div>
+        </ReactWhatsapp>
+        <div className="shrink-container">
+          <ReactWhatsapp
+            number={"+254115144146"}
+            message={"Hello DianiApp 😊 I need to send Crypto ₿"}
+            className="shrink"
+            onClick={() => gaEventTracker("Send Crypto")}
+          >
+            <div className="bg">
+              <div className="shrink">{sendcrypto}</div>
+              <div className="shrink"> Send Crypto</div>
+            </div>
+          </ReactWhatsapp>
+
+          <ReactWhatsapp
+            number={"+254115144146"}
+            message={"Hello DianiApp 😊 I need to receive Crypto ₿"}
+            className="shrink"
+            onClick={() => gaEventTracker("Receive Crypto")}
+          >
+            <div className="bg">
+              <div className="shrink">{receivecrypto}</div>
+              <div className="shrink"> Receive Crypto</div>
+            </div>
+          </ReactWhatsapp>
+        </div>
+
+     
       </div>
     </div>
   );
