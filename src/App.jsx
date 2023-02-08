@@ -31,6 +31,7 @@ function App() {
 
   // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
   const [itIsOpen, setItIsOpen] = useState(false);
+  const [IP, setIP] = useState()
   // eslint-disable-next-line no-unused-vars
   // const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +45,7 @@ function App() {
       console.log(res.data);
       const IPAddress = await res.data.IPv4;
       console.log("IP ADDRESS", IPAddress);
+      setIP(IPAddress);
       const data = await axios.get(
         `http://localhost:8000/${IPAddress}/${promo_id}`
       );
@@ -53,6 +55,7 @@ function App() {
       //creating function to load ip address from the API
     }
   };
+  console.log("hii imeenda",IP)
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000);
